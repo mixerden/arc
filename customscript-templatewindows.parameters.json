@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "DESKTOP-TM1G3J4" //Arc VM name as it is registered in ARM
+        },
+        "location": {
+            "value": "West Europe" //Azure Region where the Arc VM is registered
+        },
+        "fileUris": {
+            "value": "https://github.com/mixerden/arc/blob/main/OnboardingScript.ps1" //public URL for your script, can point to GitHub repository or an Azure Storage Account
+        },
+        "commandToExecute": {
+            "value": "powershell -ExecutionPolicy Unrestricted -File OnboardingScript.ps1" //command that will trigger the script
+        }
+    }
+}
